@@ -1,0 +1,19 @@
+<h2>Postagens</h2>
+
+<a href="/frontController/criarPostagem"><button>Criar nova postagem</button></a>
+
+{{#each postagens}}
+    <h4>{{titulo}}</h4>
+    <p>Resumo: {{resumo}}</p>
+    <p>Conteúdo: {{conteudo}}</p>
+    <sub>Categoria: {{categoria.nome}} | Data de criação: {{converterData data}}</sub><br>
+    <form action="/frontController/editarPostagem" method="get">
+    <input type="hidden" name="id" value="{{_id}}">
+    <button type="submit">Editar</button>
+    </form>
+    <form action="/frontController/deletarPostagem" method="post">
+    <input type="hidden" name="id" value="{{_id}}">
+    <button type="submit">Deletar</button>
+    </form>
+    <hr>
+{{/each}}

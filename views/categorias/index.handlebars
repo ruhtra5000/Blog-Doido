@@ -1,0 +1,8 @@
+<h1>Categorias</h1>
+
+{{#each categorias}}
+<form action="/frontController/categoriaBusca" method="get">
+    <input type="hidden" name="link" value="{{link}}">
+    <button style="margin: 10px 0; padding: 5px;">{{nome}}</button><br>
+</form>
+{{/each}}

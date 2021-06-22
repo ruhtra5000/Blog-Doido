@@ -1,0 +1,14 @@
+<h2>Editar postagem</h2>
+
+<form action="/frontController/editarPostagemProcess" method="post">
+    <input type="hidden" name="id" value="{{postagem._id}}">
+    <input type="text" name="titulo" placeholder="Título" value="{{postagem.titulo}}" required><br>
+    <input type="text" name="resumo" placeholder="Resumo" value="{{postagem.resumo}}" required><br>
+    <textarea name="conteudo" cols="30" rows="10" required>{{postagem.conteudo}}</textarea><br>
+    <select name="categoria">
+        {{#each categorias}}
+        <option value="{{_id}}">{{nome}}</option>
+        {{/each}}
+    </select><br>
+    <button type="submit">Confirmar edição</button>
+</form>

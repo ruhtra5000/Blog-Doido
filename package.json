@@ -1,0 +1,11 @@
+{
+  "name": "blog-doido",
+  "version": "1.0.0",
+  "description": "aplicação feita para a matéria de arquitetura de software",
+  "main": "BlogDoido.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arthur de Sá e Jeasiel Abner",
+  "license": "ISC"
+}

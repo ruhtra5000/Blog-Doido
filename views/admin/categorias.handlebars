@@ -1,0 +1,17 @@
+<h2>Categorias</h2>
+
+<a href="/frontController/criarCategoria"><button>Criar nova categoria</button></a>
+
+{{#each categorias}}
+    <p>Nome: {{nome}}</p>
+    <p>Link: {{link}}</p>
+    <form action="/frontController/editarCategoria" method="get">
+    <input type="hidden" name="id" value="{{_id}}">
+    <button type="submit">Editar</button>
+    </form>
+    <form action="/frontController/deletarCategoria" method="post">
+    <input type="hidden" name="id" value="{{_id}}">
+    <button type="submit">Deletar</button>
+    </form>
+    <hr>
+{{/each}}

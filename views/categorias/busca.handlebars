@@ -1,0 +1,13 @@
+<h1>Postagens sobre {{categoria.nome}}</h1>
+
+{{#each postagens}}
+    <div style="border: 1px solid black; border-radius: 10px; margin: 10px auto; padding: 15px;">
+        <h3>{{titulo}}</h3>
+        <p>{{resumo}}</p>
+        <sub>Categoria: {{categoria.nome}} | Data da publicação: {{converterData data}}</sub><br>
+        <form action="/frontController/leitura" method="get">
+        <input type="hidden" name="id" value="{{_id}}">
+        <button type="submit">Ler mais</button>
+        </form>
+    </div>
+{{/each}}

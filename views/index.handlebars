@@ -1,0 +1,19 @@
+<h1>Blog Doido</h1>
+
+<a href="/frontController/admin"><button>Painel administrativo</button></a>
+<a href="/frontController/categorias"><button>Categorias</button></a>
+<hr>
+
+<h2>Postagens recentes</h2>
+
+{{#each postagens}}
+    <div style="border: 1px solid black; border-radius: 10px; margin: 10px auto; padding: 15px;">
+        <h3>{{titulo}}</h3>
+        <p>{{resumo}}</p>
+        <sub>Categoria: {{categoria.nome}} | Data da publicação: {{converterData data}}</sub><br>
+        <form action="/frontController/leitura" method="get">
+        <input type="hidden" name="id" value="{{_id}}">
+        <button>Ler mais</button>
+        </form>
+    </div>
+{{/each}}
